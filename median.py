@@ -13,11 +13,11 @@ while True:
 def findMedian(numbers):
     numbers.sort()
     length = len(numbers)
+    temp = int(length//2)
     if (length%2 == 1):
-        median = numbers[int(length/2)]
+        median = numbers[temp]
     else:
-        temp = int(length//2)
-        median = (numbers[temp] + numbers[temp+1]) / 2
+        median = (numbers[temp] + numbers[temp-1]) / 2
     return median
 
 print(numbers)
